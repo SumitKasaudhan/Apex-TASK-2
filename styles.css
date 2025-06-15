@@ -1,0 +1,387 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    list-style-type: disc;
+}
+
+.placeholder-img {
+    background-color: #e9ecef;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item .placeholder-img {
+    height: 180px;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* To-Do List Section */
+.todo-input {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+#task-list {
+    list-style: none;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+}
+
+#task-list li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contact Form Section */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #343a40;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .todo-input {
+        flex-direction: column;
+    }
+    
+    .todo-input input {
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .todo-input button {
+        width: 100%;
+    }
+}
+
+/* Animation for Nav Links */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
